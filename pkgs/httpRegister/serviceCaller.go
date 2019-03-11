@@ -6,4 +6,5 @@ import "net/http"
 func ServiceCaller() {
 	http.HandleFunc("/regFoo", RegFoo)
 	http.HandleFunc("/regBar", RegBar)
+	http.HandleFunc("/AllPortinformers", AllPortinformers)
 }

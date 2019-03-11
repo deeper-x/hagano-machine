@@ -8,3 +8,6 @@ import (
 
 // HTTPPort ... todo description
 var HTTPPort = fmt.Sprintf(":%d", configuration.Port)
+
+// ConnStr ... to do description
+var ConnStr = fmt.Sprintf("postgres://%s:%s@%s/%s", configuration.User, configuration.Password, configuration.Host, configuration.Db)
