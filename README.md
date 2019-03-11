@@ -22,6 +22,12 @@ Run:
 $ go run main.go 
 ```
 
+Build/Install:
+```
+#TODO
+```
+
+
 
 List of services:
 ```bash
