@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	httpRegister.ServiceCaller()
+	httpRegister.UrlsRegister()
 
 	httpServer.Run(strFormatters.HTTPPort)
 }

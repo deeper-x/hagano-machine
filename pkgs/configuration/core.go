@@ -4,13 +4,13 @@ package configuration
 const Port = 8080
 
 // Db ... todo description
-const Db = "<DB_NAME>"
+const Db = "lims_cn_sw"
 
 // User ...  todo description
-const User = "<USER>"
+const User = "lims_cn_user"
 
 // Host ...  todo description
 const Host = "127.0.0.1"
 
 // Password ...  todo description
-const Password = "<PASSWORD>"
+const Password = "07R3BL4"

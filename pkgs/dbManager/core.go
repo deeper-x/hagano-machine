@@ -15,3 +15,14 @@ func GetConnection(connStr string) *sql.DB {
 
 	return db
 }
+
+// runSelect ... todo description
+func runSelect(db *sql.DB, inputQuery string) *sql.Rows {
+	rows, err := db.Query(inputQuery)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return rows
+}
