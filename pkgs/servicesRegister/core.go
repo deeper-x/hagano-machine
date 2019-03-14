@@ -1,9 +1,10 @@
-package httpRegister
+package servicesRegister
 
 import (
 	"fmt"
 	"html"
 	"net/http"
+	"net/url"
 
 	"github.com/deeper-x/hagano-machine/pkgs/dbManager"
 	"github.com/deeper-x/hagano-machine/pkgs/strFormatters"
@@ -21,7 +22,20 @@ var AllPortinformers = func(w http.ResponseWriter, r *http.Request) {
 	for k, v := range resultSet {
 		fmt.Fprintf(w, "<div>%d -> %v</div>", k, v)
 	}
+}
 
+// AllPlannedArrivals ... get all planned arrivals
+var AllPlannedArrivals = func(w http.ResponseWriter, r *http.Request) {
+	params := r.URL.Query()
+	idPortinformer := params.Get("id_portinformer")
+	resultSet := dbManager.GetPlannedArrivals(db, idPortinformer)
+	for k, v := range resultSet {
+		fmt.Fprintf(w, "%d, %v", k, v)
+	}
+}
+
+func parseParams(inRequest *http.Request) url.Values {
+	return inRequest.URL.Query()
 }
 
 // RegFoo ... A dummy test

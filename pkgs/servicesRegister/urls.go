@@ -1,4 +1,4 @@
-package httpRegister
+package servicesRegister
 
 import "net/http"
 
@@ -7,4 +7,5 @@ func UrlsRegister() {
 	http.HandleFunc("/regFoo", RegFoo)
 	http.HandleFunc("/regBar", RegBar)
 	http.HandleFunc("/AllPortinformers", AllPortinformers)
+	http.HandleFunc("/AllPlannedArrivals", AllPlannedArrivals)
 }
